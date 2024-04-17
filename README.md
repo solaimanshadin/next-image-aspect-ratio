@@ -38,7 +38,6 @@ function ImageDisplayComponent() {
       width={1920}
       height={1080}
       alt="Descriptive alt text for accessibility"
-      maxWidth="50%"
     />
   );
 }
