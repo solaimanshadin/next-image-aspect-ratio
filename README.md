@@ -1,4 +1,4 @@
-# next-image-aspect-ratio
+# next-image-aspect-ratio <a href="https://github.com/solaimanshadin/next-image-aspect-ratio/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" alt="License"></a> <a href="https://www.npmjs.com/package/next-image-aspect-ratio"><img src="https://img.shields.io/npm/v/next-image-aspect-ratio.svg" alt="npm version"></a>
 
 `next-image-aspect-ratio` is a React component designed to work within Next.js projects to provide an easy and effective way to manage image aspect ratios. This component automatically calculates the aspect ratio based on the provided width and height and ensures the image fills its container without distortion.
 
@@ -20,7 +20,7 @@ npm install next-image-aspect-ratio
 Or
 
 ```bash
-npm install next-image-aspect-ratio
+yarn add next-image-aspect-ratio
 ```
 
 ## Usage
@@ -28,8 +28,8 @@ npm install next-image-aspect-ratio
 Here's a complete example of how to use the `NextImageAspectRatio` component within a functional React component in a Next.js project:
 
 ```jsx
-import React from 'react';
-import NextImageAspectRatio from 'next-image-aspect-ratio';
+import React from "react";
+import NextImageAspectRatio from "next-image-aspect-ratio";
 
 function ImageDisplayComponent() {
   return (
@@ -44,7 +44,7 @@ function ImageDisplayComponent() {
 }
 
 export default ImageDisplayComponent;
-
+```
 
 ## Props
 
@@ -59,4 +59,3 @@ Here are the props you can pass to `NextImageAspectRatio`:
 | `maxWidth` | `string`           | No       | `"100%"` | The maximum width of the image container.                  |
 
 Additionally, `NextImageAspectRatio` supports all the properties that are available to the Next.js `Image` component, allowing you to use optional properties such as `priority`, `placeholder`, `blurDataURL`, and more for enhanced image handling and performance.
-```
