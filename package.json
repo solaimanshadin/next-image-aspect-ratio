@@ -1,12 +1,13 @@
 {
   "name": "next-image-aspect-ratio",
   "description": "Responsive aspect ratio component by using NextJs Image Component",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
   "files": [
     "dist/**/*.js",
+    "dist/**/*.d.ts",
     "README.md",
     "LICENSE"
   ],
