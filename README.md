@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# next-image-aspect-ratio
 
-## Getting Started
+`next-image-aspect-ratio` is a React component designed to work within Next.js projects to provide an easy and effective way to manage image aspect ratios. This component automatically calculates the aspect ratio based on the provided width and height and ensures the image fills its container without distortion.
 
-First, run the development server:
+## Features
+
+- **Easy Integration**: Seamlessly integrates with Next.js projects.
+- **Responsive Design Support**: Maintains the aspect ratio of images to ensure they adapt to different device screens without distortion.
+- **Full Compatibility**: Accepts all image properties available in Next.js's `Image` component.
+- **Customizable Width**: Allows customization of the maximum width through a simple prop.
+
+## Installation
+
+To install the package, you can use npm or Yarn. Run one of the following commands in the root directory of your Next.js project:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install next-image-aspect-ratio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install next-image-aspect-ratio
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Usage
 
-## Learn More
+Here's a complete example of how to use the `NextImageAspectRatio` component within a functional React component in a Next.js project:
 
-To learn more about Next.js, take a look at the following resources:
+```jsx
+import React from 'react';
+import NextImageAspectRatio from 'next-image-aspect-ratio';
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+function ImageDisplayComponent() {
+  return (
+    <NextImageAspectRatio
+      src="/path/to/image.jpg"
+      width={1920}
+      height={1080}
+      alt="Descriptive alt text for accessibility"
+      maxWidth="50%"
+    />
+  );
+}
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+export default ImageDisplayComponent;
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Props
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Here are the props you can pass to `NextImageAspectRatio`:
+
+| Property   | Type               | Required | Default  | Description                                                |
+| ---------- | ------------------ | -------- | -------- | ---------------------------------------------------------- |
+| `src`      | `string`           | Yes      | None     | URL of the image.                                          |
+| `width`    | `string \| number` | Yes      | None     | The original width of the image.                           |
+| `height`   | `string \| number` | Yes      | None     | The original height of the image.                          |
+| `alt`      | `string`           | Yes      | None     | Descriptive text for the image, crucial for accessibility. |
+| `maxWidth` | `string`           | No       | `"100%"` | The maximum width of the image container.                  |
+
+Additionally, `NextImageAspectRatio` supports all the properties that are available to the Next.js `Image` component, allowing you to use optional properties such as `priority`, `placeholder`, `blurDataURL`, and more for enhanced image handling and performance.
+```

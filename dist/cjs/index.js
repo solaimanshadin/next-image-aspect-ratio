@@ -32,24 +32,29 @@ function $9ba0f9a5c47c04f2$export$ee2b54e92bdbaa0c(inputString) {
 }
 
 
-function $9233cea927cb9637$var$NextImageAspectRatio({ height: height, width: width, alt: alt, ...restProps }) {
+function $9233cea927cb9637$var$NextImageAspectRatio({ maxWidth: maxWidth = "100%", height: height, width: width, alt: alt, ...restProps }) {
     const heightNum = (0, $9ba0f9a5c47c04f2$export$ee2b54e92bdbaa0c)(height);
     const widthNum = (0, $9ba0f9a5c47c04f2$export$ee2b54e92bdbaa0c)(width);
     const ratio = widthNum !== 0 ? heightNum / widthNum : 0;
     return /*#__PURE__*/ (0, $i9b1P$reactjsxruntime.jsx)("div", {
         style: {
-            position: "relative",
-            width: "100%",
-            paddingBottom: `${ratio * 100}%`
+            maxWidth: maxWidth
         },
-        children: /*#__PURE__*/ (0, $i9b1P$reactjsxruntime.jsx)((0, ($parcel$interopDefault($i9b1P$nextimage))), {
-            alt: alt,
-            ...restProps,
-            layout: "fill",
-            objectFit: "cover",
+        children: /*#__PURE__*/ (0, $i9b1P$reactjsxruntime.jsx)("div", {
             style: {
-                borderRadius: "9px"
-            }
+                position: "relative",
+                width: "100%",
+                paddingBottom: `${ratio * 100}%`
+            },
+            children: /*#__PURE__*/ (0, $i9b1P$reactjsxruntime.jsx)((0, ($parcel$interopDefault($i9b1P$nextimage))), {
+                alt: alt,
+                ...restProps,
+                layout: "fill",
+                objectFit: "cover",
+                style: {
+                    borderRadius: "9px"
+                }
+            })
         })
     });
 }

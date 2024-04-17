@@ -1,10 +1,15 @@
 {
   "name": "next-image-aspect-ratio",
   "description": "Responsive aspect ratio component by using NextJs Image Component",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist/**/*.js",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "parcel build src/index.tsx --dist-dir docs --public-url .",
@@ -26,5 +31,10 @@
     "eslint-config-next": "14.2.1",
     "parcel": "^2.12.0",
     "typescript": "^5"
+  },
+  "homepage": "https://github.com/solaimanshadin/next-image-aspect-ratio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solaimanshadin/next-image-aspect-ratio.git"
   }
 }
